@@ -6,6 +6,6 @@ To get started with this project locally, follow the instructions below.
 - Make sure to install nodejs
 - Clone the project
 - Run the following commands
-  cd your-repository-name
-  npm install
-  npm run dev
+  ```cd your-repository-name```
+  ```npm install```
+  ```npm run dev```
