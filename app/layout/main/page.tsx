@@ -1,9 +1,11 @@
-const Main = () => {
+import Dashboard from "@/app/pages/dashboard/page"
+
+const MainLayout = () => {
     return (
         <>
-            <h3>Main section</h3>
+            <Dashboard />
         </>
     )
 }
 
-export default Main;
+export default MainLayout;
