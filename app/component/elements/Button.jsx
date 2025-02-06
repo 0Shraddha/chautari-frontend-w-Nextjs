@@ -3,7 +3,7 @@
 
 const Button = ({text, type}) => {
     return (
-        <button type={type} className="btn btn-sm btn-light border">{text}</button>
+        <button type={type} className="btn px-4 btn-secondary rounded-lg">{text}</button>
     );
 }
 

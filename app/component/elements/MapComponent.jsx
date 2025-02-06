@@ -6,6 +6,7 @@ import L from "leaflet";
 // Fix for missing marker icons in Leaflet
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
+import Button from "./Button";
 
 const customIcon = new L.Icon({
   iconUrl: markerIcon,
@@ -176,9 +177,7 @@ const RestaurantMap = () => {
           <p className="text-sm text-gray-600">📅 Booked {selectedCafes.bookingsToday} times today</p>
 
           {/* Directions Button */}
-          <button className="mt-4 w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-lg">
-            <a href="">📍 Directions</a> 
-          </button>
+          <Button  text={"📍 Directions"}/>
 
           {/* Select a Time */}
           <h3 className="mt-5 text-lg font-semibold">Select a time</h3>
@@ -192,6 +191,9 @@ const RestaurantMap = () => {
           <button className="mt-5 w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-lg">
             Open restaurant profile
           </button>
+
+          <Button  text={"Open restaurant profile"}/>
+
 
           {/* Popular Menu Items Section */}
           <h3 className="mt-5 text-lg font-semibold">Popular menu items</h3>
