@@ -9,11 +9,12 @@ const FormTextarea = forwardRef<HTMLTextAreaElement, FormTextareaProps>(
   ({ label, error, ...props }, ref) => {
     return (
       <div>
-        <label>{label}</label>
+        <label className="form-label fw-semibold">{label}</label>
         <textarea
           ref={ref}
           {...props}
-          className="form-control"
+          className="form-control mb-2"
+          rows={6}
         />
         {error && <p className="text-danger">{error}</p>}
       </div>
