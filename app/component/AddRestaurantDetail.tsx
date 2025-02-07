@@ -3,7 +3,7 @@
 import { useForm } from "react-hook-form";
 import InputElement from '../component/elements/InputElement';
 import TextareaElement from '../component/elements/TextareaElement';
-import Button from "./elements/Button";
+// import Button from "./elements/Button";
 
 type RestaurantFormInputs = {
     name : string;
@@ -17,17 +17,18 @@ type RestaurantFormInputs = {
 export default function RestaurantDetailForm(){
     const {
         register,
-        handleSubmit,
+        // handleSubmit,
         formState  : { errors },
     } = useForm<RestaurantFormInputs>();
 
-    const onSubmit = (data: RestaurantFormInputs) => {
-        console.log("Restaurant Data:", data);
-      };
+    // const onSubmit = (data: RestaurantFormInputs) => {
+    //     console.log("Restaurant Data:", data);
+    //   };
 
     return(
-        <form onSubmit={handleSubmit(onSubmit)} className="p-4">
-           <div className="row mb-3">
+        // <form onSubmit={handleSubmit(onSubmit)} className="p-4">
+         <>
+              <div className="row mb-3">
             <div className="col">
                 <InputElement
                     label="Restaurant Name"
@@ -72,9 +73,9 @@ export default function RestaurantDetailForm(){
             {...register("description", { required: "Description is required" })}
             error={errors.description?.message}
         />
+         </>
 
-        <Button text={"Submit"} type={"submit"} />
-        </form>
+        // </form>
     )
 }
 

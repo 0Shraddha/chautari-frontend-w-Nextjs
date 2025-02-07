@@ -1,0 +1,32 @@
+.label{
+    font-weight: 500;
+  
+    margin-bottom: .5rem;
+}
+
+.form-control{
+    margin-bottom: .5rem;
+}
+
+.form-control:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-radius: none;
+    border-color: #ff6d39;
+  }
+
+.imgUploader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #9e9eb1; 
+    border-radius: 0.5rem;
+    width: 530px;
+    height: 240px;
+    cursor: pointer;
+}
+
+.imgUploader:hover{
+    border-color: #ff6d39;
+}

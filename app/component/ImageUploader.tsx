@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { Camera, X } from 'lucide-react';
+import styles from '../styles/form.module.css'
 
 export default function UploadPhoto() {
   const { register, setValue } = useForm();
@@ -20,15 +21,15 @@ export default function UploadPhoto() {
   };
 
   return (
-    <div className="flex flex-col align-items-center justify-item-center border-2 border-dashed border-gray-300 rounded-lg p-4 w-72 cursor-pointer">
-      <label htmlFor="file-upload" className={`${preview ? '' : 'bg-light'} d-flex align-items-center justify-content-center text-center p-3`} style={{ border: '1px dotted gray', borderRadius : '8px', width : "500px", height: "200px"}}>
-        {preview ? (
+    <div className="col bg-white p-4" style={{ borderRadius: '8px'}}>
+      <label htmlFor="file-upload" className={`${preview ? '' : 'bg-light'} ${styles.imgUploader} d-flex align-items-center justify-content-center text-center p-3`}>
+        {preview ? (    
          <div className="relative">
           <img
-            src={preview}
+            src={preview}     
             alt="Uploaded"
             className="my-2"
-            style={{ width : "450px", height: "180px", objectFit : "cover"}}
+            style={{ width : "480px", height: "200px", objectFit : "cover"}}
           />
           <X 
           size={'8px'}
@@ -48,7 +49,7 @@ export default function UploadPhoto() {
         ) : (
           <div className="py-3 px-5" id="uploadImg">
             <Camera size={22} className="mb-3"/>
-            <p className="text-warning">Upload Photo</p>
+            <p style={{ color :'#ff6d39'}}>Upload Photo</p>
             <p className="text-secondary">PNG or JPEG (max. 10MB)</p>
           </div>
         )}
